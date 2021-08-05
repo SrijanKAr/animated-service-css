@@ -1,0 +1,107 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #222;
+	color: #fff;
+	font-family: 'popins', san serif;
+}
+.service{
+	width: 1300px;
+	padding: 100px 60px;
+	margin: auto;
+}
+.service h1{
+	font-size: 40px;
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 60px;
+	padding-bottom: 15px;
+	position: relative;
+}
+.service h1::after{
+	content: '';
+	position: absolute;
+	width: 170px;
+	height: 3px;
+	background-color: #fff;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.card{
+	background-color: #333;
+	width: calc(26% - 20px);
+	padding: 40px 20px;
+	border-radius: 10px;
+	position: relative;
+	/*cursor: pointer;*/
+	transition: all 0.5s ease;
+	overflow: hidden;
+}
+.card button {
+
+	position: absolute;
+	width: 120px;
+	padding: 10px;
+	background-color: white;
+	color: black;
+	bottom: -150px;
+	right: -150px;
+	border: none;
+	border-radius: 6px;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+}
+.card button a{
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+.card:hover button{
+	bottom: 10px;
+	right: 40px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+}
+.box{
+	color: #fff;
+	text-align: left;
+}
+.box i{
+	font-size: 40px;
+	padding-left: 10px;
+	color: crimson;
+	transition: color 0.3s ease-in;
+}
+.box h2{
+	font-size: 25px;
+}
+.card::before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 0%;
+	background-color: crimson;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 10px;
+	transition: all 0.5s ease;
+}
+.card:hover{
+	background-color: transparent;
+}
+.card:hover::before{
+	width: 100%;
+}
+.card:hover .box i{
+	color: #000;
+}
